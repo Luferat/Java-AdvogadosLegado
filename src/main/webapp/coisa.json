@@ -1,0 +1,6 @@
+cliente: {
+	"id": 10,
+	"name": "Joca da Silva",
+	"email": "joca@silva.com",
+	"birth": "2000-01-14"
+}
