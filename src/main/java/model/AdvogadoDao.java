@@ -48,8 +48,6 @@ public class AdvogadoDao {
 		rs = stmt.executeQuery();
 		while (rs.next()) {
 			int id = rs.getInt("idadv");
-			
-			
 			int oab = rs.getInt("idadv");
 			String nome = rs.getString("nome");
 			String telefone = rs.getString("telefone");

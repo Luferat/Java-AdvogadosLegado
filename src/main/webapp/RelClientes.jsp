@@ -12,14 +12,13 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Clientes</title>
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-
 </head>
 <body>
 
@@ -28,8 +27,10 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 			<thead>
 				<tr>
 					<th scope="col">Código</th>
+					<th scope="col">Data</th>
 					<th scope="col">Cliente</th>
 					<th scope="col">Telefone</th>
+					<th scope="col">Opções</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -39,6 +40,7 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 
 				<tr>
 					<td><%=lista.get(i).getIdcliente()%></td>
+					<td><%=lista.get(i).getData()%></td>
 					<td><%=lista.get(i).getNome()%></td>
 					<td><%=lista.get(i).getTelefone()%></td>
 					<td><a href="">Editar</a> &nbsp;|&nbsp; <a href="">Apagar</a>
