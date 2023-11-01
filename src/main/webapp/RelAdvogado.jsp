@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
-<%@page import="model.Advogado"%>
-<%@page import="java.util.ArrayList"%>
+<%@ page import="model.Advogado"%>
+<%@ page import="java.util.ArrayList"%>
 <%
 ArrayList<Advogado> lista = (ArrayList<Advogado>) request.getAttribute("advogados");
 %>
@@ -22,6 +22,17 @@ ArrayList<Advogado> lista = (ArrayList<Advogado>) request.getAttribute("advogado
 
 </head>
 <body>
+
+	<h1>Advogados</h1>
+	<hr>
+	<nav>
+		<a href="index.jsp">Início</a>
+		&nbsp;|&nbsp; 
+		<a href="CadAvogado.jsp">Cadastro de Advogado</a>
+		&nbsp;|&nbsp;
+		<a href="CadCliente.jsp">Cadastro de Cliente</a>
+	</nav>
+	<hr>
 
 	<div class="container">
 		<table class="table table-dark">

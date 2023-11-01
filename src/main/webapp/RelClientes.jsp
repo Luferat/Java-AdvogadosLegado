@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
-<%@page import="model.Cliente"%>
-<%@page import="java.util.ArrayList"%>
+<%@ page import="model.Cliente"%>
+<%@ page import="java.util.ArrayList"%>
 <%
 ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes");
 %>
@@ -16,11 +16,20 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 <body>
+
+	<h1>Advogados</h1>
+	<hr>
+	<nav>
+		<a href="index.jsp">Início</a>
+		&nbsp;|&nbsp; 
+		<a href="CadAvogado.jsp">Cadastro de Advogado</a>
+		&nbsp;|&nbsp;
+		<a href="CadCliente.jsp">Cadastro de Cliente</a>
+	</nav>
+	<hr>
 
 	<div class="container">
 		<table class="table table-dark">
@@ -43,7 +52,10 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 					<td><%=lista.get(i).getData()%></td>
 					<td><%=lista.get(i).getNome()%></td>
 					<td><%=lista.get(i).getTelefone()%></td>
-					<td><a href="">Editar</a> &nbsp;|&nbsp; <a href="">Apagar</a>
+					<td>
+						<a href="">Editar</a>
+						&nbsp;|&nbsp;
+						<a href="apagarcliente?id=<%=lista.get(i).getIdcliente()%>">Apagar</a>
 					</td>
 				</tr>
 

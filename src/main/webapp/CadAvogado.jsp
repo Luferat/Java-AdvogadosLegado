@@ -11,6 +11,18 @@
 
 </head>
 <body>
+
+	<h1>Advogados</h1>
+	<hr>
+	<nav>
+		<a href="index.jsp">Início</a>
+		&nbsp;|&nbsp; 
+		<a href="CadAvogado.jsp">Cadastro de Advogado</a>
+		&nbsp;|&nbsp;
+		<a href="CadCliente.jsp">Cadastro de Cliente</a>
+	</nav>
+	<hr>
+
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">

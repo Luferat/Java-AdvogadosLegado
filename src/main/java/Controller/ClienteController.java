@@ -19,7 +19,7 @@ import model.ClienteDao;
 /**
  * Servlet implementation class ClienteController
  */
-@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente" })
+@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente" })
 
 public class ClienteController extends HttpServlet {
 
