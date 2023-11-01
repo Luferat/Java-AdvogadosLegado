@@ -14,7 +14,7 @@ public class Cliente {
 		super();
 	}
 
-	public Cliente(int idcliente, Date data, String nome, String telefone, String statuscliente) {
+	public Cliente(int idcliente, Date data, String nome, String telefone, String status) {
 		super();
 		this.idcliente = idcliente;
 		this.data = data;

@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.Advogado;
 import model.AdvogadoDao;
-import model.Cliente;
 
 /**
  * Servlet implementation class AdvogadoController

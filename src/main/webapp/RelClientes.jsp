@@ -23,11 +23,9 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 	<h1>Advogados</h1>
 	<hr>
 	<nav>
-		<a href="index.jsp">Início</a>
-		&nbsp;|&nbsp; 
-		<a href="CadAvogado.jsp">Cadastro de Advogado</a>
-		&nbsp;|&nbsp;
-		<a href="CadCliente.jsp">Cadastro de Cliente</a>
+		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="CadAvogado.jsp">Cadastro
+			de Advogado</a> &nbsp;|&nbsp; <a href="CadCliente.jsp">Cadastro de
+			Cliente</a>
 	</nav>
 	<hr>
 
@@ -52,16 +50,12 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 					<td><%=lista.get(i).getData()%></td>
 					<td><%=lista.get(i).getNome()%></td>
 					<td><%=lista.get(i).getTelefone()%></td>
-					<td>
-						<a
-						 href="editarcliente?id=<%=lista.get(i).getIdcliente()%>"
-						 onclick="return confirm('Tem certeza que deseja editar?')"
-						>Editar</a>
-						&nbsp;|&nbsp;
-						<a 
+					<td><a
+						href="editarcliente?id=<%=lista.get(i).getIdcliente()%>"
+						onclick="return confirm('Tem certeza que deseja editar?')">Editar</a>
+						&nbsp;|&nbsp; <a
 						href="apagarcliente?id=<%=lista.get(i).getIdcliente()%>"
-						onclick="return confirm('Tem certeza que deseja editar?')"
-						>Apagar</a>
+						onclick="return confirm('Tem certeza que deseja editar?')">Apagar</a>
 					</td>
 				</tr>
 
@@ -77,16 +71,10 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 
 	<!-- JavaScript (Opcional) -->
 	<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous"></script>
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-		crossorigin="anonymous"></script>
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
