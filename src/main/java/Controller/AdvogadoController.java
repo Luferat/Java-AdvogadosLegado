@@ -52,10 +52,9 @@ public class AdvogadoController extends HttpServlet {
 
 	protected void EnviaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		adv.setOab(Integer.parseInt(request.getParameter("oab")));
+		adv.setOab(request.getParameter("oab"));
 		adv.setNome(request.getParameter("nome"));
 		adv.setTelefone(request.getParameter("telefone"));
-		adv.setTipocausas(request.getParameter("tipocausas"));
 		daoadv.Salvar(adv);
 	}
 

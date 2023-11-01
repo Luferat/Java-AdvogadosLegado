@@ -1,30 +1,52 @@
 package model;
 
+import java.util.Date;
+
 public class Advogado {
 
-	private int oab;
+	private int idadv;
+	private Date data;
+	private String oab;
 	private String nome;
 	private String telefone;
-	private String tipocausas;
+	private String status;
 
 	public Advogado() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Advogado(int oab, String nome, String telefone, String tipocausas) {
+	public Advogado(int idadv, Date data, String oab, String nome, String telefone, String status) {
 		super();
+		this.idadv = idadv;
+		this.data = data;
 		this.oab = oab;
 		this.nome = nome;
 		this.telefone = telefone;
-		this.tipocausas = tipocausas;
+		this.status = status;
 	}
 
-	public int getOab() {
+	public int getIdadv() {
+		return idadv;
+	}
+
+	public void setIdadv(int idadv) {
+		this.idadv = idadv;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
+	}
+
+	public String getOab() {
 		return oab;
 	}
 
-	public void setOab(int oab) {
+	public void setOab(String oab) {
 		this.oab = oab;
 	}
 
@@ -44,12 +66,12 @@ public class Advogado {
 		this.telefone = telefone;
 	}
 
-	public String getTipocausas() {
-		return tipocausas;
+	public String getStatus() {
+		return status;
 	}
 
-	public void setTipocausas(String tipocausas) {
-		this.tipocausas = tipocausas;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }

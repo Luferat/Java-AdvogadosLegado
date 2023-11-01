@@ -13,19 +13,15 @@ public class ClienteDao {
 	ResultSet rs;
 
 	public void Salvar(Cliente cli) {
-
 		try {
 			con = new Conexao().conectar();
-			String sql = "insert into cliente(nome,telefone)values(?,?)";
-
+			String sql = "insert into cliente(nome, telefone) values (?, ?)";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			stmt.setString(1, cli.getNome());
 			stmt.setString(2, cli.getTelefone());
 			stmt.executeUpdate();
-
 			stmt.close();
 			con.close();
-
 		} catch (Exception erro) {
 			erro.printStackTrace();
 		}

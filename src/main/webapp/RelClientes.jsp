@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 
 <%@ page import="model.Cliente"%>
 <%@ page import="java.util.ArrayList"%>
@@ -11,7 +11,7 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Clientes</title>
 
 <!-- Bootstrap CSS -->
@@ -23,7 +23,7 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 	<h1>Advogados</h1>
 	<hr>
 	<nav>
-		<a href="index.jsp">Início</a>
+		<a href="index.jsp">InÃ­cio</a>
 		&nbsp;|&nbsp; 
 		<a href="CadAvogado.jsp">Cadastro de Advogado</a>
 		&nbsp;|&nbsp;
@@ -35,11 +35,11 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 		<table class="table table-dark">
 			<thead>
 				<tr>
-					<th scope="col">Código</th>
+					<th scope="col">CÃ³digo</th>
 					<th scope="col">Data</th>
 					<th scope="col">Cliente</th>
 					<th scope="col">Telefone</th>
-					<th scope="col">Opções</th>
+					<th scope="col">OpÃ§Ãµes</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -53,9 +53,15 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 					<td><%=lista.get(i).getNome()%></td>
 					<td><%=lista.get(i).getTelefone()%></td>
 					<td>
-						<a href="editarcliente?id=<%=lista.get(i).getIdcliente()%>">Editar</a>
+						<a
+						 href="editarcliente?id=<%=lista.get(i).getIdcliente()%>"
+						 onclick="return confirm('Tem certeza que deseja editar?')"
+						>Editar</a>
 						&nbsp;|&nbsp;
-						<a href="apagarcliente?id=<%=lista.get(i).getIdcliente()%>">Apagar</a>
+						<a 
+						href="apagarcliente?id=<%=lista.get(i).getIdcliente()%>"
+						onclick="return confirm('Tem certeza que deseja editar?')"
+						>Apagar</a>
 					</td>
 				</tr>
 

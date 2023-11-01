@@ -36,7 +36,7 @@
 	
 	<form action="novoadvogado">
 		  <div class="form-group">
-		    <label for="oab">Oab</label>
+		    <label for="oab">OAB</label>
 		    <input type="text" class="form-control" id="" name="oab">
 		  </div>
 		  
@@ -48,11 +48,6 @@
 		  <div class="form-group">
 		    <label for="telefone">Telefone</label>
 		    <input type="text" class="form-control" id="" name="telefone">
-		  </div>
-		  
-		  <div class="form-group">
-		    <label for="telefone">Tipos de Causas</label>
-		    <input type="text" class="form-control" id="" name="tipocausas">
 		  </div>
 		  
 		  <div class="form-group">

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 
 <%@ page import="model.Advogado"%>
 <%@ page import="java.util.ArrayList"%>
@@ -11,7 +11,7 @@ ArrayList<Advogado> lista = (ArrayList<Advogado>) request.getAttribute("advogado
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 
 <!-- Bootstrap CSS -->
@@ -26,11 +26,9 @@ ArrayList<Advogado> lista = (ArrayList<Advogado>) request.getAttribute("advogado
 	<h1>Advogados</h1>
 	<hr>
 	<nav>
-		<a href="index.jsp">Início</a>
-		&nbsp;|&nbsp; 
-		<a href="CadAvogado.jsp">Cadastro de Advogado</a>
-		&nbsp;|&nbsp;
-		<a href="CadCliente.jsp">Cadastro de Cliente</a>
+		<a href="index.jsp">InÃ­cio</a> &nbsp;|&nbsp; <a href="CadAvogado.jsp">Cadastro
+			de Advogado</a> &nbsp;|&nbsp; <a href="CadCliente.jsp">Cadastro de
+			Cliente</a>
 	</nav>
 	<hr>
 
@@ -38,11 +36,12 @@ ArrayList<Advogado> lista = (ArrayList<Advogado>) request.getAttribute("advogado
 		<table class="table table-dark">
 			<thead>
 				<tr>
-					<th scope="col">Oab</th>
+					<th scope="col">Id</th>
+					<th scope="col">Data</th>
+					<th scope="col">OAB</th>
 					<th scope="col">Nome</th>
 					<th scope="col">Telefone</th>
-					<th scope="col">Tipos de Causas</th>
-					<th scope="col">Opções</th>
+					<th scope="col">OpÃ§Ãµes</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -51,15 +50,12 @@ ArrayList<Advogado> lista = (ArrayList<Advogado>) request.getAttribute("advogado
 				%>
 
 				<tr>
+					<td><%=lista.get(i).getIdadv()%></td>
+					<td><%=lista.get(i).getData()%></td>
 					<td><%=lista.get(i).getOab()%></td>
 					<td><%=lista.get(i).getNome()%></td>
 					<td><%=lista.get(i).getTelefone()%></td>
-					<td><%=lista.get(i).getTipocausas()%></td>
-					<td>
-						<a href="">Editar</a>
-						&nbsp;|&nbsp;
-						<a href="">Apagar</a>
-					</td>
+					<td><a href="">Editar</a> &nbsp;|&nbsp; <a href="">Apagar</a></td>
 				</tr>
 
 				<%
