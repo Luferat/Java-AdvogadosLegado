@@ -53,7 +53,7 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 					<td><%=lista.get(i).getNome()%></td>
 					<td><%=lista.get(i).getTelefone()%></td>
 					<td>
-						<a href="">Editar</a>
+						<a href="editarcliente?id=<%=lista.get(i).getIdcliente()%>">Editar</a>
 						&nbsp;|&nbsp;
 						<a href="apagarcliente?id=<%=lista.get(i).getIdcliente()%>">Apagar</a>
 					</td>
