@@ -4,11 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Advogados</title>
+<title>Escritório de Advocacia</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 <body>
 
-	<h1>Advogados</h1>
+	<h1>Escritório de Advocacia</h1>
 	<hr>
 	<nav>
 		<a href="index.jsp">Início</a>
