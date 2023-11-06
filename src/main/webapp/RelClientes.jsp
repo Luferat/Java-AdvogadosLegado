@@ -5,6 +5,7 @@
 <%@ page import="java.util.ArrayList"%>
 <%
 ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes");
+String success = (String) request.getAttribute("success");
 %>
 
 
@@ -30,6 +31,15 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 	<hr>
 
 	<div class="container">
+
+		<%
+		if (success != null) {
+		%>
+		<div><%=success%></div>
+		<%
+		}
+		%>
+
 		<table class="table table-dark">
 			<thead>
 				<tr>
