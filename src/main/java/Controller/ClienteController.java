@@ -40,24 +40,39 @@ public class ClienteController extends HttpServlet {
 		String acao = request.getServletPath();
 		System.out.println("hatamata");
 		System.out.println(acao);
-		if (acao.equals("/novocliente")) {
+
+		switch (acao) {
+		case "/novocliente":
 			EnviaDados(request, response);
-		} else if (acao.equals("/buscacliente")) {
+			break;
+		case "/buscacliente":
 			BuscaDados(request, response);
-		} else if (acao.equals("/apagarcliente")) {
+			break;
+		case "/apagarcliente":
 			ApagaDados(request, response);
+			break;
+		default:
+			System.out.println("Erro:  rota inexistente!");
 		}
 
 	}
+	
+	/* Design Patterns (Case)
+	 * 
+	 * camelCase → atributos, métodos, variáveis,...
+	 * PascalCase → Nome de classes
+	 * snake_case → PHP ou Python
+	 * dash-case → CSS
+	 * */
 
 	protected void BuscaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		ArrayList<Cliente> lista = daocli.Listar();
 		String success = (String) request.getAttribute("success");
-		
-		if(success != null)
+
+		if (success != null)
 			request.setAttribute("success", success);
-		
+
 		request.setAttribute("clientes", lista);
 		RequestDispatcher rd = request.getRequestDispatcher("RelClientes.jsp");
 		rd.forward(request, response);
