@@ -32,7 +32,7 @@ public class ClienteDao {
 
 			con = new Conexao().conectar();
 			ArrayList<Cliente> clientes = new ArrayList<>();
-			String sql = "select * from cliente";
+			String sql = "select * from cliente WHERE statuscliente = 'on'";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			rs = stmt.executeQuery();
 

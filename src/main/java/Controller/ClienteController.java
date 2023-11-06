@@ -56,14 +56,13 @@ public class ClienteController extends HttpServlet {
 		}
 
 	}
-	
-	/* Design Patterns (Case)
+
+	/*
+	 * Design Patterns (Case)
 	 * 
-	 * camelCase → atributos, métodos, variáveis,...
-	 * PascalCase → Nome de classes
-	 * snake_case → PHP ou Python
-	 * dash-case → CSS
-	 * */
+	 * camelCase → atributos, métodos, variáveis,... PascalCase → Nome de classes
+	 * snake_case → PHP ou Python dash-case → CSS
+	 */
 
 	protected void BuscaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -84,6 +83,14 @@ public class ClienteController extends HttpServlet {
 		cli.setTelefone(request.getParameter("telefone"));
 		daocli.Salvar(cli);
 		request.setAttribute("success", "Cliente cadastrado com sucesso!");
+		request.getRequestDispatcher("buscacliente").forward(request, response);
+	}
+
+	protected void ApagaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String id = request.getParameter("id");
+		daocli.Apagar(id);
+		request.setAttribute("success", "Cliente apagado com sucesso!");
 		request.getRequestDispatcher("buscacliente").forward(request, response);
 	}
 
