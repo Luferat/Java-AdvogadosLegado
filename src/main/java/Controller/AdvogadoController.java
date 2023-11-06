@@ -55,12 +55,19 @@ public class AdvogadoController extends HttpServlet {
 		adv.setNome(request.getParameter("nome"));
 		adv.setTelefone(request.getParameter("telefone"));
 		daoadv.Salvar(adv);
+		request.setAttribute("success", "Advogado cadastrado com sucesso!");
+		request.getRequestDispatcher("buscaadvogados").forward(request, response);
 	}
 
 	protected void BuscaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		ArrayList<Advogado> lista = daoadv.Listar();
+		String success = (String) request.getAttribute("success");
+
+		if (success != null) {
+			request.setAttribute("success", success);
+		}
+
 		request.setAttribute("advogados", lista);
 		RequestDispatcher rd = request.getRequestDispatcher("RelAdvogado.jsp");
 		rd.forward(request, response);

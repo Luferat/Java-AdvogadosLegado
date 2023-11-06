@@ -16,7 +16,7 @@ public class AdvogadoDao {
 	public void Salvar(Advogado adv) {
 		try {
 			con = new Conexao().conectar();
-			String sql = "insert into advogado (oab, nome, telefone) values (?, ?, ?)";
+			String sql = "INSERT INTO advogado (oab, nome, telefone) VALUES (?, ?, ?)";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			stmt.setString(1, adv.getOab());
 			stmt.setString(2, adv.getNome());
