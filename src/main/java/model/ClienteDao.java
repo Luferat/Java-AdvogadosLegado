@@ -54,4 +54,21 @@ public class ClienteDao {
 
 	}
 
+	public void Apagar(String id) {
+
+		try {
+
+			con = new Conexao().conectar();
+			String sql = "UPDATE cliente SET statuscliente = 'off' WHERE idcliente=?;";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, id);
+			stmt.executeQuery();
+			stmt.close();
+			con.close();
+
+		} catch (Exception erro) {
+			erro.printStackTrace();
+		}
+	}
+
 }
