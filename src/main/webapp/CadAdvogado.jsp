@@ -17,7 +17,7 @@
 	<h1>Advogados</h1>
 	<hr>
 	<nav>
-		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="CadAvogado.jsp">Cadastro
+		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="CadAdvogado.jsp">Cadastro
 			de Advogado</a> &nbsp;|&nbsp; <a href="CadCliente.jsp">Cadastro de
 			Cliente</a>
 	</nav>

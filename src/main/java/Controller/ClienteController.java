@@ -10,12 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.catalina.startup.SetAllPropertiesRule;
-
 import model.Cliente;
 import model.ClienteDao;
 
-@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente" })
+@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagarcliente" })
 
 public class ClienteController extends HttpServlet {
 
@@ -39,9 +37,6 @@ public class ClienteController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// TODO Auto-generated method stub
-		// response.getWriter().append("Served at: ").append(request.getContextPath());
-
 		String acao = request.getServletPath();
 		System.out.println("hatamata");
 		System.out.println(acao);
@@ -49,6 +44,8 @@ public class ClienteController extends HttpServlet {
 			EnviaDados(request, response);
 		} else if (acao.equals("/buscacliente")) {
 			BuscaDados(request, response);
+		} else if (acao.equals("/apagarcliente")) {
+			ApagaDados(request, response);
 		}
 
 	}

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
 <%@ page import="model.Cliente"%>
@@ -24,7 +24,7 @@ String success = (String) request.getAttribute("success");
 	<h1>Advogados</h1>
 	<hr>
 	<nav>
-		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="CadAvogado.jsp">Cadastro
+		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="CadAdvogado.jsp">Cadastro
 			de Advogado</a> &nbsp;|&nbsp; <a href="CadCliente.jsp">Cadastro de
 			Cliente</a>
 	</nav>
