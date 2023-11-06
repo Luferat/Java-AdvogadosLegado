@@ -36,7 +36,7 @@ String success = (String) request.getAttribute("success");
 		<%
 		if (success != null) {
 		%>
-		<div><%=success%></div>
+		<script>alert("<%=success%>")</script>
 		<%
 		}
 		%>
