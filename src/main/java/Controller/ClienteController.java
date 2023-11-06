@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Cliente;
 import model.ClienteDao;
 
-@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagarcliente" })
+@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente" })
 
 public class ClienteController extends HttpServlet {
 
@@ -48,7 +48,7 @@ public class ClienteController extends HttpServlet {
 		case "/buscacliente":
 			BuscaDados(request, response);
 			break;
-		case "/apagarcliente":
+		case "/apagacliente":
 			ApagaDados(request, response);
 			break;
 		default:

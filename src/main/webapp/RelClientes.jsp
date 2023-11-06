@@ -64,7 +64,7 @@ String success = (String) request.getAttribute("success");
 						href="editarcliente?id=<%=lista.get(i).getIdcliente()%>"
 						onclick="return confirm('Tem certeza que deseja editar?')">Editar</a>
 						&nbsp;|&nbsp; <a
-						href="apagarcliente?id=<%=lista.get(i).getIdcliente()%>"
+						href="apagacliente?id=<%=lista.get(i).getIdcliente()%>"
 						onclick="return confirm('Tem certeza que deseja editar?')">Apagar</a>
 					</td>
 				</tr>
