@@ -32,7 +32,7 @@ public class AdvogadoDao {
 		try {
 			con = new Conexao().conectar();
 			ArrayList<Advogado> advogados = new ArrayList<>();
-			String sql = "select * from advogado";
+			String sql = "select * from advogado WHERE statusadv = 'on'";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			while (rs.next()) {
@@ -52,6 +52,21 @@ public class AdvogadoDao {
 			return null;
 		}
 
+	}
+	
+	public void Apagar(String id) {
+
+		try {
+			con = new Conexao().conectar();
+			String sql = "UPDATE advogado SET statusadv = 'off' WHERE idadv = ?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, id);
+			stmt.executeUpdate();
+			stmt.close();
+			con.close();
+		} catch (Exception erro) {
+			erro.printStackTrace();
+		}
 	}
 
 }

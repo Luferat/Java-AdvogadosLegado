@@ -16,7 +16,7 @@ import model.AdvogadoDao;
 /**
  * Servlet implementation class AdvogadoController
  */
-@WebServlet({ "/AdvogadoController", "/novoadvogado", "/buscaadvogados" })
+@WebServlet(urlPatterns = { "/AdvogadoController", "/novoadvogado", "/buscaadvogados", "/apagaadvogado" })
 public class AdvogadoController extends HttpServlet {
 
 	Advogado adv = new Advogado();
@@ -42,10 +42,13 @@ public class AdvogadoController extends HttpServlet {
 		// response.getWriter().append("Served at: ").append(request.getContextPath());
 
 		String acao = request.getServletPath();
+		
 		if (acao.equals("/novoadvogado")) {
 			EnviaDados(request, response);
 		} else if (acao.equals("/buscaadvogados")) {
 			BuscaDados(request, response);
+		} else if(acao.equals("/apagaadvogado")) {
+			ApagaDados(request, response);
 		}
 	}
 
@@ -72,6 +75,14 @@ public class AdvogadoController extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("RelAdvogado.jsp");
 		rd.forward(request, response);
 
+	}
+	
+	protected void ApagaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String id = request.getParameter("id");
+		daoadv.Apagar(id);
+		request.setAttribute("success", "Advogado apagado com sucesso!");
+		request.getRequestDispatcher("buscaadvogados").forward(request, response);
 	}
 
 	/**

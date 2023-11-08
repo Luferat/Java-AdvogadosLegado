@@ -13,30 +13,27 @@ import javax.servlet.http.HttpServletResponse;
 import model.Cliente;
 import model.ClienteDao;
 
-@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente" })
+@WebServlet(urlPatterns = { "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente" })
 
 public class ClienteController extends HttpServlet {
 
+	// Cria objeto com modelo do cliente.
 	Cliente cli = new Cliente();
+	
+	// Cria objeto para acesso aos dados do cliente.
 	ClienteDao daocli = new ClienteDao();
 
+	// Serial, requisito para o servlet.
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public ClienteController() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		// Lê o "endpoint" do endereço da rota acessada.
 		String acao = request.getServletPath();
 
 		switch (acao) {

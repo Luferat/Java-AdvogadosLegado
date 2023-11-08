@@ -63,7 +63,10 @@ String success = (String) request.getAttribute("success");
 					<td><%=lista.get(i).getOab()%></td>
 					<td><%=lista.get(i).getNome()%></td>
 					<td><%=lista.get(i).getTelefone()%></td>
-					<td><a href="">Editar</a> &nbsp;|&nbsp; <a href="">Apagar</a></td>
+					<td>
+					<a href="editaradvogado?id=<%=lista.get(i).getIdadv()%>" onclick="return confirm('Tem certeza que deseja editar o registro.')">Editar</a>
+					&nbsp;|&nbsp; 
+					<a href="apagaadvogado?id=<%=lista.get(i).getIdadv()%>" onclick="return confirm('Tem certeza que deseja apagar o registro.')">Apagar</a></td>
 				</tr>
 
 				<%
