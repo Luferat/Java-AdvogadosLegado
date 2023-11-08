@@ -55,7 +55,6 @@ public class AdvogadoDao {
 	}
 	
 	public void Apagar(String id) {
-
 		try {
 			con = new Conexao().conectar();
 			String sql = "UPDATE advogado SET statusadv = 'off' WHERE idadv = ?";
