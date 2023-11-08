@@ -38,8 +38,6 @@ public class ClienteController extends HttpServlet {
 			throws ServletException, IOException {
 
 		String acao = request.getServletPath();
-		System.out.println("hatamata");
-		System.out.println(acao);
 
 		switch (acao) {
 		case "/novocliente":
