@@ -93,7 +93,7 @@ public class ClienteDao {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		return null;
+		return cliente;
 	}
 
 }
