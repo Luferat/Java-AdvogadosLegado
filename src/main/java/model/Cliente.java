@@ -23,6 +23,16 @@ public class Cliente {
 		this.status = status;
 	}
 
+	// Construtor que não precisa do status.
+	// Polimorfismo.
+	public Cliente(int idcliente, Date data, String nome, String telefone) {
+		super();
+		this.idcliente = idcliente;
+		this.data = data;
+		this.nome = nome;
+		this.telefone = telefone;
+	}
+
 	public int getIdcliente() {
 		return idcliente;
 	}

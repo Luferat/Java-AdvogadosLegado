@@ -81,19 +81,18 @@ public class ClienteDao {
 			stmt.setString(1, id);
 			ResultSet rs = stmt.executeQuery();
 			rs.next();
-
 			int idcliente = rs.getInt("idcliente");
 			Date data = rs.getDate("datacliente");
 			String nome = rs.getString("nome");
 			String telefone = rs.getString("telefone");
-			String status = rs.getString("statuscliente");
+			cliente.add(new Cliente(idcliente, data, nome, telefone));
+			return cliente;
 
-			cliente.add(new Cliente(idcliente, data, nome, telefone, status));
-
-		} catch (Exception e) {
-			// TODO: handle exception
+		} catch (Exception erro) {
+			erro.printStackTrace();
+			return null;
 		}
-		return cliente;
+
 	}
 
 }

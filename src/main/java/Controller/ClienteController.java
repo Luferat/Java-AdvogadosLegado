@@ -2,6 +2,7 @@ package Controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -86,16 +87,20 @@ public class ClienteController extends HttpServlet {
 
 	protected void ApagaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		String id = request.getParameter("id");
 		daocli.Apagar(id);
 		request.setAttribute("success", "Cliente apagado com sucesso!");
 		request.getRequestDispatcher("buscacliente").forward(request, response);
 	}
-	
+
 	protected void EditaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
-		daocli.Editar(id);
+		List<Cliente> cliente = daocli.Editar(id);
+		request.setAttribute("cliente", cliente);
+		RequestDispatcher rd = request.getRequestDispatcher("EditCliente.jsp");
+		rd.forward(request, response);
 	}
 
 	/**
