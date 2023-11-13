@@ -17,23 +17,19 @@
 	<h1>Advogados</h1>
 	<hr>
 	<nav>
-		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="CadAdvogado.jsp">Cadastro
-			de Advogado</a> &nbsp;|&nbsp; <a href="CadCliente.jsp">Cadastro de
+		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="buscaadvogados">Cadastro
+			de Advogado</a> &nbsp;|&nbsp; <a href="buscacliente">Cadastro de
 			Cliente</a>
 	</nav>
 	<hr>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<a href="buscaadvogados"><button class="btn btn-success">Relatório
-						de Advogados</button></a>
-			</div>
-		</div>
-	</div>
-
 
 	<div class="container">
+
+		<p>
+			<a href="buscaadvogados"><button class="btn btn-success">Relatório
+					de Advogados</button></a>
+		</p>
 
 		<form action="novoadvogado">
 			<div class="form-group">

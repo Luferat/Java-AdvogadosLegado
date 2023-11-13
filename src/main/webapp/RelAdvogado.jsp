@@ -25,18 +25,25 @@ String success = (String) request.getAttribute("success");
 	<h1>Advogados</h1>
 	<hr>
 	<nav>
-		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="CadAdvogado.jsp">Cadastro
-			de Advogado</a> &nbsp;|&nbsp; <a href="CadCliente.jsp">Cadastro de
+		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="buscaadvogados">Cadastro
+			de Advogado</a> &nbsp;|&nbsp; <a href="buscacliente">Cadastro de
 			Cliente</a>
 	</nav>
 	<hr>
 
 	<div class="container">
 
+		<p>
+			<a href="CadAdvogado.jsp"><button class="btn btn-success">Cadastrar
+					Advogado</button></a>
+		</p>
+
 		<%
 		if (success != null) {
 		%>
-		<script>alert("<%=success%>")</script>
+		<script>alert("<%=success%>
+			")
+		</script>
 		<%
 		}
 		%>
@@ -63,10 +70,11 @@ String success = (String) request.getAttribute("success");
 					<td><%=lista.get(i).getOab()%></td>
 					<td><%=lista.get(i).getNome()%></td>
 					<td><%=lista.get(i).getTelefone()%></td>
-					<td>
-					<a href="editaradvogado?id=<%=lista.get(i).getIdadv()%>" onclick="return confirm('Tem certeza que deseja editar o registro.')">Editar</a>
-					&nbsp;|&nbsp; 
-					<a href="apagaadvogado?id=<%=lista.get(i).getIdadv()%>" onclick="return confirm('Tem certeza que deseja apagar o registro.')">Apagar</a></td>
+					<td><a href="editaradvogado?id=<%=lista.get(i).getIdadv()%>"
+						onclick="return confirm('Tem certeza que deseja editar o registro.')">Editar</a>
+						&nbsp;|&nbsp; <a
+						href="apagaadvogado?id=<%=lista.get(i).getIdadv()%>"
+						onclick="return confirm('Tem certeza que deseja apagar o registro.')">Apagar</a></td>
 				</tr>
 
 				<%

@@ -21,16 +21,20 @@ String success = (String) request.getAttribute("success");
 </head>
 <body>
 
-	<h1>Advogados</h1>
+	<h1>Clientes</h1>
 	<hr>
 	<nav>
-		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="CadAdvogado.jsp">Cadastro
-			de Advogado</a> &nbsp;|&nbsp; <a href="CadCliente.jsp">Cadastro de
+		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="buscaadvogados">Cadastro
+			de Advogado</a> &nbsp;|&nbsp; <a href="buscacliente">Cadastro de
 			Cliente</a>
 	</nav>
 	<hr>
 
 	<div class="container">
+
+		<p>
+			<a href="CadCliente.jsp"><button class="btn btn-success">Cadastrar Cliente</button></a>
+		</p>
 
 		<%
 		if (success != null) {

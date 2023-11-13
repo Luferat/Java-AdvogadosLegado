@@ -7,30 +7,27 @@
 <title>Cadastro de Cliente</title>
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
 </head>
 <body>
 
-	<h1>Advogados</h1>
+	<h1>Clientes</h1>
 	<hr>
 	<nav>
-		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="CadAdvogado.jsp">Cadastro
-			de Advogado</a> &nbsp;|&nbsp; <a href="CadCliente.jsp">Cadastro de
+		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="buscaadvogados">Cadastro
+			de Advogado</a> &nbsp;|&nbsp; <a href="buscacliente">Cadastro de
 			Cliente</a>
 	</nav>
 	<hr>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<a href="buscacliente"><button class="btn btn-success">Relatório
-						de Clientes</button></a>
-			</div>
-		</div>
-	</div>
-
 	<div class="container">
+
+		<p>
+			<a href="buscacliente"><button class="btn btn-success">Relatório
+					de Clientes</button></a>
+		</p>
 
 		<form action="novocliente">
 

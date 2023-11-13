@@ -13,12 +13,12 @@
 
 	<h1>Escritório de Advocacia</h1>
 	<hr>
-	<nav>
+	<nav style="text-align: center">
 		<a href="index.jsp">Início</a>
 		&nbsp;|&nbsp; 
-		<a href="CadAdvogado.jsp">Cadastro de Advogado</a>
+		<a href="buscaadvogados">Cadastro de Advogado</a>
 		&nbsp;|&nbsp;
-		<a href="CadCliente.jsp">Cadastro de Cliente</a>
+		<a href="buscacliente">Cadastro de Cliente</a>
 	</nav>
 	<hr>
 

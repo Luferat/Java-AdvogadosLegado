@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Cliente;
 import model.ClienteDao;
 
-@WebServlet(urlPatterns = { "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente" })
+@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente" })
 
 public class ClienteController extends HttpServlet {
 

@@ -16,7 +16,7 @@ import model.AdvogadoDao;
 /**
  * Servlet implementation class AdvogadoController
  */
-@WebServlet(urlPatterns = { "/AdvogadoController", "/novoadvogado", "/buscaadvogados", "/apagaadvogado" })
+@WebServlet({ "/AdvogadoController", "/novoadvogado", "/buscaadvogados", "/apagaadvogado" })
 public class AdvogadoController extends HttpServlet {
 
 	Advogado adv = new Advogado();
