@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import model.Cliente;
 import model.ClienteDao;
 
-@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente" })
+@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente", "/editarcliente" })
 
 public class ClienteController extends HttpServlet {
 
 	// Cria objeto com modelo do cliente.
 	Cliente cli = new Cliente();
-	
+
 	// Cria objeto para acesso aos dados do cliente.
 	ClienteDao daocli = new ClienteDao();
 
@@ -45,6 +45,9 @@ public class ClienteController extends HttpServlet {
 			break;
 		case "/apagacliente":
 			ApagaDados(request, response);
+			break;
+		case "/editarcliente":
+			EditaDados(request, response);
 			break;
 		default:
 			System.out.println("Erro:  rota inexistente!");

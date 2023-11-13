@@ -24,7 +24,7 @@ String success = (String) request.getAttribute("success");
 
 	<h1>Advogados</h1>
 	<hr>
-	<nav>
+	<nav style="text-align: center">
 		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="buscaadvogados">Cadastro
 			de Advogado</a> &nbsp;|&nbsp; <a href="buscacliente">Cadastro de
 			Cliente</a>
