@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import util.Conexao;
 
@@ -67,6 +68,32 @@ public class ClienteDao {
 		} catch (Exception erro) {
 			erro.printStackTrace();
 		}
+	}
+
+	public List<Cliente> Editar(String id) {
+
+		List<Cliente> cliente = new ArrayList<>();
+
+		try {
+			con = new Conexao().conectar();
+			String sql = "SELECT * FROM cliente WHERE idcliente = ? AND statuscliente = 'on'";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, id);
+			ResultSet rs = stmt.executeQuery();
+			rs.next();
+
+			int idcliente = rs.getInt("idcliente");
+			Date data = rs.getDate("datacliente");
+			String nome = rs.getString("nome");
+			String telefone = rs.getString("telefone");
+			String status = rs.getString("statuscliente");
+
+			cliente.add(new Cliente(idcliente, data, nome, telefone, status));
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
 	}
 
 }

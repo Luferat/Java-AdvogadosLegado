@@ -91,6 +91,12 @@ public class ClienteController extends HttpServlet {
 		request.setAttribute("success", "Cliente apagado com sucesso!");
 		request.getRequestDispatcher("buscacliente").forward(request, response);
 	}
+	
+	protected void EditaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String id = request.getParameter("id");
+		daocli.Editar(id);
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
