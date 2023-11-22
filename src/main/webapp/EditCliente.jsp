@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ page import="model.Cliente"%>
+<%@ page import="java.util.List"%>
+<%
+List<Cliente> cliente = (List<Cliente>) request.getAttribute("cliente");
+String success = (String) request.getAttribute("success");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
