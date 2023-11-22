@@ -98,6 +98,7 @@ public class ClienteController extends HttpServlet {
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
 		List<Cliente> cliente = daocli.Editar(id);
+		System.out.println(cliente);
 		request.setAttribute("cliente", cliente);
 		RequestDispatcher rd = request.getRequestDispatcher("EditCliente.jsp");
 		rd.forward(request, response);
