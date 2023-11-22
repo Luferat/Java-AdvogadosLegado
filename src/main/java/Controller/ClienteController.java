@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Cliente;
 import model.ClienteDao;
 
-@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente", "/editarcliente" })
+@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente", "/editarcliente", "/salvacliente" })
 
 public class ClienteController extends HttpServlet {
 
@@ -49,6 +49,9 @@ public class ClienteController extends HttpServlet {
 			break;
 		case "/editarcliente":
 			EditaDados(request, response);
+			break;
+		case "/salvacliente":
+			SalvaDados(request, response);
 			break;
 		default:
 			System.out.println("Erro:  rota inexistente!");
@@ -102,6 +105,18 @@ public class ClienteController extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("EditCliente.jsp");
 		rd.forward(request, response);
 	}
+	
+	
+	// 8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8
+	protected void SalvaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		cli.setIdcliente(Integer.parseInt(request.getParameter("id")));
+		cli.setNome(request.getParameter("nome"));
+		cli.setTelefone(request.getParameter("telefone"));
+		daocli.Salvar(cli);
+		request.setAttribute("success", "Cliente cadastrado com sucesso!");
+		request.getRequestDispatcher("buscacliente").forward(request, response);
+	} 
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse

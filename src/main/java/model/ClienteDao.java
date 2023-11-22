@@ -74,6 +74,7 @@ public class ClienteDao {
 
 		List<Cliente> cliente = new ArrayList<>();
 
+	
 		try {
 			con = new Conexao().conectar();
 			String sql = "SELECT * FROM cliente WHERE idcliente = ? AND statuscliente = 'on'";

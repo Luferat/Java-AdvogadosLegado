@@ -37,16 +37,24 @@ String success = (String) request.getAttribute("success");
 					de Clientes</button></a>
 		</p>
 
-		<form action="novocliente">
+		<form action="salvacliente">
+
+			<input type="hidden" name="id" value="<%=cliente.get(0).getIdcliente()%>">
+
+			<div class="form-group">
+				<label>Cadastrado em: </label> <span><%=cliente.get(0).getData()%></span>
+			</div>
 
 			<div class="form-group">
 				<label for="nome">Nome</label> <input type="text"
-					class="form-control" id="nome" name="nome">
+					class="form-control" id="nome" name="nome"
+					value="<%=cliente.get(0).getNome()%>">
 			</div>
 
 			<div class="form-group">
 				<label for="telefone">Telefone</label> <input type="text"
-					class="form-control" id="" name="telefone">
+					class="form-control" id="" name="telefone"
+					value="<%=cliente.get(0).getTelefone()%>">
 			</div>
 
 			<div class="form-group">
