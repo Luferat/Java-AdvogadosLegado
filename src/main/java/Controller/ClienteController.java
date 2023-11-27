@@ -54,6 +54,8 @@ public class ClienteController extends HttpServlet {
 		case "/salvacliente":
 			SalvaDados(request, response);
 			break;
+
+		// Pesquisa na tabela de clientes pelo nome e/ou telefone.
 		case "/pesquisacliente":
 			PesquisaDados(request, response);
 		default:
@@ -119,6 +121,7 @@ public class ClienteController extends HttpServlet {
 		request.getRequestDispatcher("buscacliente").forward(request, response);
 	}
 
+	// Pesquisa na tabela de clientes pelo nome e/ou telefone.
 	protected void PesquisaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String q = request.getParameter("q");

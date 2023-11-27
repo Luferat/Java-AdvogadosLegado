@@ -112,12 +112,13 @@ public class ClienteDao {
 		}
 	}
 
+	// Pesquisa na tabela de clientes pelo nome e/ou telefone.
 	public ArrayList<Cliente> Pesquisar(String q) {
 		try {
 			con = new Conexao().conectar();
 			ArrayList<Cliente> clientes = new ArrayList<>();
 			String sql = "select * from cliente WHERE statuscliente = 'on' AND (nome LIKE CONCAT('%', ?, '%') OR telefone LIKE CONCAT('%', ?, '%'));";
-			
+
 			PreparedStatement stmt = con.prepareStatement(sql);
 			stmt.setString(1, q);
 			stmt.setString(2, q);
@@ -140,5 +141,5 @@ public class ClienteDao {
 		}
 
 	}
-	
+
 }
