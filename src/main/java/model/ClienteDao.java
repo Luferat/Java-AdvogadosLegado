@@ -112,4 +112,33 @@ public class ClienteDao {
 		}
 	}
 
+	public ArrayList<Cliente> Pesquisar(String q) {
+		try {
+			con = new Conexao().conectar();
+			ArrayList<Cliente> clientes = new ArrayList<>();
+			String sql = "select * from cliente WHERE statuscliente = 'on' AND (nome LIKE CONCAT('%', ?, '%') OR telefone LIKE CONCAT('%', ?, '%'));";
+			
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, q);
+			stmt.setString(2, q);
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				int idcliente = rs.getInt("idcliente");
+				Date data = rs.getDate("datacliente");
+				String nome = rs.getString("nome");
+				String telefone = rs.getString("telefone");
+				String status = rs.getString("statuscliente");
+				clientes.add(new Cliente(idcliente, data, nome, telefone, status));
+			}
+
+			return clientes;
+
+		} catch (Exception erro) {
+			System.out.println(erro);
+			return null;
+		}
+
+	}
+	
 }

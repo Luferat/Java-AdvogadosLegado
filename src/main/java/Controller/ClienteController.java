@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import model.Cliente;
 import model.ClienteDao;
 
-@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente", "/editarcliente", "/salvacliente" })
+@WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagacliente", "/editarcliente", "/salvacliente",
+		"/pesquisacliente" })
 
 public class ClienteController extends HttpServlet {
 
@@ -53,6 +54,8 @@ public class ClienteController extends HttpServlet {
 		case "/salvacliente":
 			SalvaDados(request, response);
 			break;
+		case "/pesquisacliente":
+			PesquisaDados(request, response);
 		default:
 			System.out.println("Erro:  rota inexistente!");
 		}
@@ -105,9 +108,7 @@ public class ClienteController extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("EditCliente.jsp");
 		rd.forward(request, response);
 	}
-	
-	
-	// 8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8
+
 	protected void SalvaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		cli.setIdcliente(Integer.parseInt(request.getParameter("id")));
@@ -116,7 +117,20 @@ public class ClienteController extends HttpServlet {
 		daocli.Atualizar(cli);
 		request.setAttribute("success", "Cliente atualizado com sucesso!");
 		request.getRequestDispatcher("buscacliente").forward(request, response);
-	} 
+	}
+
+	protected void PesquisaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String q = request.getParameter("q");
+		ArrayList<Cliente> lista = daocli.Pesquisar(q);
+		String success = (String) request.getAttribute("success");
+		if (success != null)
+			request.setAttribute("success", success);
+		request.setAttribute("clientes", lista);
+		request.setAttribute("q", q);
+		RequestDispatcher rd = request.getRequestDispatcher("RelClientes.jsp");
+		rd.forward(request, response);
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse

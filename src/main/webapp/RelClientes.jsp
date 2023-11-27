@@ -6,8 +6,8 @@
 <%
 ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes");
 String success = (String) request.getAttribute("success");
+String q = (String) request.getAttribute("q");
 %>
-
 
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,12 @@ String success = (String) request.getAttribute("success");
 	<div class="container">
 
 		<p>
-			<a href="CadCliente.jsp"><button class="btn btn-success">Cadastrar Cliente</button></a>
+			<a href="CadCliente.jsp"><button class="btn btn-success">Cadastrar
+					Cliente</button></a>
+		<form name="buscacliente" action="pesquisacliente">
+			<input type="search" name="q" value="<%=q%>">
+			<button type="submit">🔎</button>
+		</form>
 		</p>
 
 		<%
