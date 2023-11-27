@@ -14,11 +14,9 @@
 	<h1>Escritório de Advocacia</h1>
 	<hr>
 	<nav style="text-align: center">
-		<a href="index.jsp">Início</a>
-		&nbsp;|&nbsp; 
-		<a href="buscaadvogados">Cadastro de Advogado</a>
-		&nbsp;|&nbsp;
-		<a href="buscacliente">Cadastro de Cliente</a>
+		<a href="index.jsp">Início</a> &nbsp;|&nbsp; <a href="buscaadvogados">Cadastro
+			de Advogado</a> &nbsp;|&nbsp; <a href="buscacliente">Cadastro de
+			Cliente</a>
 	</nav>
 	<hr>
 

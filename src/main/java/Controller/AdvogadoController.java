@@ -42,12 +42,12 @@ public class AdvogadoController extends HttpServlet {
 		// response.getWriter().append("Served at: ").append(request.getContextPath());
 
 		String acao = request.getServletPath();
-		
+
 		if (acao.equals("/novoadvogado")) {
 			EnviaDados(request, response);
 		} else if (acao.equals("/buscaadvogados")) {
 			BuscaDados(request, response);
-		} else if(acao.equals("/apagaadvogado")) {
+		} else if (acao.equals("/apagaadvogado")) {
 			ApagaDados(request, response);
 		}
 	}
@@ -76,7 +76,7 @@ public class AdvogadoController extends HttpServlet {
 		rd.forward(request, response);
 
 	}
-	
+
 	protected void ApagaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String id = request.getParameter("id");

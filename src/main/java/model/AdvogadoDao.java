@@ -53,7 +53,7 @@ public class AdvogadoDao {
 		}
 
 	}
-	
+
 	public void Apagar(String id) {
 		try {
 			con = new Conexao().conectar();

@@ -39,7 +39,8 @@ String success = (String) request.getAttribute("success");
 
 		<form action="salvacliente">
 
-			<input type="hidden" name="id" value="<%=cliente.get(0).getIdcliente()%>">
+			<input type="hidden" name="id"
+				value="<%=cliente.get(0).getIdcliente()%>">
 
 			<div class="form-group">
 				<label>Cadastrado em: </label> <span><%=cliente.get(0).getData()%></span>
