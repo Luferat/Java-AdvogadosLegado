@@ -113,8 +113,8 @@ public class ClienteController extends HttpServlet {
 		cli.setIdcliente(Integer.parseInt(request.getParameter("id")));
 		cli.setNome(request.getParameter("nome"));
 		cli.setTelefone(request.getParameter("telefone"));
-		daocli.Salvar(cli);
-		request.setAttribute("success", "Cliente cadastrado com sucesso!");
+		daocli.Atualizar(cli);
+		request.setAttribute("success", "Cliente atualizado com sucesso!");
 		request.getRequestDispatcher("buscacliente").forward(request, response);
 	} 
 

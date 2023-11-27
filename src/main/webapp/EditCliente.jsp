@@ -53,7 +53,7 @@ String success = (String) request.getAttribute("success");
 
 			<div class="form-group">
 				<label for="telefone">Telefone</label> <input type="text"
-					class="form-control" id="" name="telefone"
+					class="form-control" id="telefone" name="telefone"
 					value="<%=cliente.get(0).getTelefone()%>">
 			</div>
 
