@@ -74,7 +74,6 @@ public class ClienteDao {
 
 		List<Cliente> cliente = new ArrayList<>();
 
-	
 		try {
 			con = new Conexao().conectar();
 			String sql = "SELECT * FROM cliente WHERE idcliente = ? AND statuscliente = 'on'";
@@ -94,6 +93,23 @@ public class ClienteDao {
 			return null;
 		}
 
+	}
+
+	public void Atualizar(Cliente cli) {
+		try {
+			con = new Conexao().conectar();
+			// String sql = "insert into cliente(nome, telefone) values (?, ?)";
+			String sql = "UPDATE cliente SET nome = ?, telefone = ? WHERE idcliente = ? AND statuscliente = 'on'";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, cli.getNome());
+			stmt.setString(2, cli.getTelefone());
+			stmt.setInt(3, cli.getIdcliente());
+			stmt.executeUpdate();
+			stmt.close();
+			con.close();
+		} catch (Exception erro) {
+			erro.printStackTrace();
+		}
 	}
 
 }
