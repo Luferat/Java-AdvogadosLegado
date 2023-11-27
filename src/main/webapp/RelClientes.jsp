@@ -9,6 +9,7 @@ String success = (String) request.getAttribute("success");
 
 // Pesquisa na tabela de clientes pelo nome e/ou telefone.
 String q = (String) request.getAttribute("q");
+if (q == null) q ="";
 %>
 
 <!DOCTYPE html>
