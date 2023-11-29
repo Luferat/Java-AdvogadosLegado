@@ -25,6 +25,15 @@ public class Advogado {
 		this.telefone = telefone;
 		this.status = status;
 	}
+	
+	public Advogado(int idadv, Date data, String oab, String nome, String telefone) {
+		super();
+		this.idadv = idadv;
+		this.data = data;
+		this.oab = oab;
+		this.nome = nome;
+		this.telefone = telefone;
+	}
 
 	public int getIdadv() {
 		return idadv;

@@ -6,6 +6,10 @@
 <%
 ArrayList<Advogado> lista = (ArrayList<Advogado>) request.getAttribute("advogados");
 String success = (String) request.getAttribute("success");
+
+String q = (String) request.getAttribute("q");
+if (q == null)
+	q = "";
 %>
 
 
@@ -33,10 +37,15 @@ String success = (String) request.getAttribute("success");
 
 	<div class="container">
 
-		<p>
+		<div>
 			<a href="CadAdvogado.jsp"><button class="btn btn-success">Cadastrar
 					Advogado</button></a>
-		</p>
+			<!--  Pesquisa na tabela de clientes pelo nome e/ou telefone. -->
+			<form name="buscaadvogado" action="pesquisaadvogado">
+				<input type="search" name="q" value="<%=q%>">
+				<button type="submit">🔎</button>
+			</form>
+		</div>
 
 		<%
 		if (success != null) {

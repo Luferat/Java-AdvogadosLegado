@@ -58,6 +58,7 @@ public class ClienteController extends HttpServlet {
 		// Pesquisa na tabela de clientes pelo nome e/ou telefone.
 		case "/pesquisacliente":
 			PesquisaDados(request, response);
+			break;
 		default:
 			System.out.println("Erro:  rota inexistente!");
 		}

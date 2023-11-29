@@ -36,7 +36,7 @@ if (q == null)
 
 	<div class="container">
 
-		<p>
+		<div>
 			<a href="CadCliente.jsp"><button class="btn btn-success">Cadastrar
 					Cliente</button></a>
 			<!--  Pesquisa na tabela de clientes pelo nome e/ou telefone. -->
@@ -44,7 +44,7 @@ if (q == null)
 			<input type="search" name="q" value="<%=q%>">
 			<button type="submit">🔎</button>
 		</form>
-		</p>
+		</div>
 
 		<%
 		if (success != null) {
