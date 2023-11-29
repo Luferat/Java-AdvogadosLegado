@@ -34,13 +34,16 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img class="d-block w-100" src="./static/img/slide1.png" alt="First slide">
+					<img class="d-block w-100" src="./static/img/slide1.png"
+						alt="First slide">
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="./static/img/slide2.png" alt="Second slide">
+					<img class="d-block w-100" src="./static/img/slide2.png"
+						alt="Second slide">
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="./static/img/slide3.png" alt="Third slide">
+					<img class="d-block w-100" src="./static/img/slide3.png"
+						alt="Third slide">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators"
