@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
-	<%@ include file="./_header.jsp"%>
+
+<%@ include file="./_header.jsp"%>
 
 <%@ page import="model.Advogado"%>
 <%@ page import="java.util.List"%>
@@ -11,6 +11,8 @@ String success = (String) request.getAttribute("success");
 %>
 
 <div class="container">
+
+	<h2>Editar Advogado</h2>
 
 	<p>
 		<a href="buscaadvogados"><button class="btn btn-success">Relatório

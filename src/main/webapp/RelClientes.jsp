@@ -17,9 +17,11 @@ if (q == null)
 
 <div class="container">
 
+	<h2>Listagem de Clientes</h2>
+
 	<div class="row justify-content-between">
 		<div class="col-sm">
-			<a href="CadAdvogado.jsp"><button class="btn btn-success">Cadastrar
+			<a href="CadCliente.jsp"><button class="btn btn-success">Cadastrar
 					Cliente</button></a>
 		</div>
 		<div class="col-sm">
@@ -65,8 +67,7 @@ if (q == null)
 				<td><%=lista.get(i).getData()%></td>
 				<td><%=lista.get(i).getNome()%></td>
 				<td><%=lista.get(i).getTelefone()%></td>
-				<td><a href="editarcliente?id=<%=lista.get(i).getIdcliente()%>"
-					onclick="return confirm('Tem certeza que deseja editar?')">Editar</a>
+				<td><a href="editarcliente?id=<%=lista.get(i).getIdcliente()%>">Editar</a>
 					&nbsp;|&nbsp; <a
 					href="apagacliente?id=<%=lista.get(i).getIdcliente()%>"
 					onclick="return confirm('Tem certeza que deseja editar?')">Apagar</a>

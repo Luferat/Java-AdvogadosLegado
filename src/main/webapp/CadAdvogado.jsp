@@ -5,7 +5,9 @@
 
 <div class="container">
 
-		<p>
+	<h2>Cadastrar Advogado</h2>
+
+	<p>
 			<a href="buscaadvogados"><button class="btn btn-success">Relatório
 					de Advogados</button></a>
 		</p>
