@@ -24,7 +24,7 @@ if (q == null)
 		<div class="col-sm">
 			<form name="buscacliente" action="pesquisaadvogado">
 				<div class="input-group mb-3">
-					<input type="search" class="form-control" name="q" value="<%=q%>">
+					<input type="search" class="form-control" name="q" value="<%=q%>" placeholder="Procurar">
 					<div class="input-group-append">
 						<button class="btn btn-outline-secondary" type="button"
 							id="button-addon2">🔎</button>
@@ -34,7 +34,6 @@ if (q == null)
 		</div>
 	
 	</div>
-&nbsp;
 
 <%
 if (success != null) {
