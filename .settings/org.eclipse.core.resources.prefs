@@ -1,2 +1,11 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/CadAdvogado.jsp=UTF-8
+encoding//src/main/webapp/CadCliente.jsp=UTF-8
+encoding//src/main/webapp/EditAdvogado.jsp=UTF-8
+encoding//src/main/webapp/EditCliente.jsp=UTF-8
+encoding//src/main/webapp/RelAdvogado.jsp=UTF-8
+encoding//src/main/webapp/RelClientes.jsp=UTF-8
+encoding//src/main/webapp/_footer.jsp=UTF-8
+encoding//src/main/webapp/_header.jsp=UTF-8
+encoding//src/main/webapp/index.jsp=UTF-8
 encoding/<project>=UTF-8
